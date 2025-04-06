@@ -6,5 +6,6 @@ const createInt8TypedArray = (length, position, value) =>{
   const view = new DataView(buffer);
   view.setInt8(position, value);
   return view;
-}
-export default createInt8TypedArray
+};
+
+export default createInt8TypedArray;
