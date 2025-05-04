@@ -49,7 +49,8 @@ class Server:
         current_index = index
         count = 0
 
-        while count < page_size and current_index < len(self.__dataset) + page_size:
+        while (count < page_size and
+               current_index < len(self.__dataset) + page_size):
             item = indexed_data.get(current_index)
             if item:
                 data.append(item)
