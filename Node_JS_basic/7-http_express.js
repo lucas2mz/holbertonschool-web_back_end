@@ -2,7 +2,7 @@ const express = require('express');
 const countStudents = require('./3-read_file_async');
 
 const app = express();
-const port = 1245;
+const PORT = 1245;
 const database = process.argv[2];
 
 app.get('/', (req, res) => {
@@ -18,5 +18,5 @@ app.get('/students', async (req, res) => {
   }
 });
 
-const server = app.listen(port);
+const server = app.listen(PORT);
 module.exports = server;
