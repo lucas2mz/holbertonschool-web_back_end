@@ -1,6 +1,6 @@
 const http = require('http');
-const countStudents = require('./3-read_file_async');
 const process = require('process');
+const countStudents = require('./3-read_file_async');
 
 const DB_PATH = process.argv[2];
 
@@ -20,7 +20,7 @@ const app = http.createServer((req, res) => {
             return;
           }
 
-          const lines = data.split('\n').filter(line => line.trim() !== '');
+          const lines = data.split('\n').filter((line) => line.trim() !== '');
           const headers = lines.shift().split(',');
           const firstNameIdx = headers.indexOf('firstname');
           const fieldIdx = headers.indexOf('field');
